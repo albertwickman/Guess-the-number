@@ -1,0 +1,28 @@
+from random import randrange
+from math import fabs
+
+def main():
+    user1Guess = int(input("User 1 bet: "))
+    user2Guess = int(input("User 2 bet: "))
+    user1Guess = int(user1Guess)
+    user2Guess = int(user2Guess)
+    computerGuess = randrange(1,101)
+    u1diff = fabs(computerGuess-user1Guess)
+    u2diff = fabs(computerGuess-user2Guess)
+    valid_answer_yes = ("Yes")
+    valid_answer_no = ("No")
+
+    if u1diff == u2diff:
+        print("Tie")
+    elif u1diff < u2diff:
+        print("User 1 won")
+    else:
+        print("User 2 won")
+
+    redo = input("Do you want to play again? ")
+    if redo in valid_answer_yes:
+        main()
+    elif redo in valid_answer_no:
+        print("The game has been terminated...")
+        exit()
+main()
