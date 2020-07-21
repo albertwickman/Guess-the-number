@@ -8,6 +8,9 @@ def tryNumber(user):
         except ValueError:
             print("fel")
             pass
+        except NameError:
+            print("fel")
+            pass
         else:
             if n in range(0, 101):
                 return n
@@ -25,8 +28,8 @@ def main():
     u1diff = fabs(randompicked - user1Guess)
     u2diff = fabs(randompicked - user2Guess)
 
-    valid_answer_yes = "Yes"
-    valid_answer_no = "No"
+    valid_answer_yes = ("Yes")
+    valid_answer_no = ("No")
 
     if u1diff == u2diff:
         print("Tie")
@@ -35,7 +38,7 @@ def main():
     else:
         print("User 2 won. The number was: "+str(randompicked))
 
-    redo = input("Do you want to play again? ")
+    redo = str(input("Do you want to play again? "))
     if redo in valid_answer_yes:
         main()
     elif redo in valid_answer_no:
