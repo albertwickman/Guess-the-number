@@ -1,7 +1,8 @@
 from random import randrange
 from math import fabs
 
-
+def abbo():
+    return abbo()
 def tryNumber(user):
     while True:
         try:
