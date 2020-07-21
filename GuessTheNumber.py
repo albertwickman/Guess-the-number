@@ -11,8 +11,6 @@ def tryNumber(user):
         else:
             if n in range(0, 101):
                 return n
-
-
 def computerGuess():
     randomGuess = randrange(0, 101)
     return randomGuess
@@ -33,9 +31,9 @@ def main():
     if u1diff == u2diff:
         print("Tie")
     elif u1diff < u2diff:
-        print("User 1 won")
+        print("User 1 won. The number was: "+str(randompicked))
     else:
-        print("User 2 won")
+        print("User 2 won. The number was: "+str(randompicked))
 
     redo = input("Do you want to play again? ")
     if redo in valid_answer_yes:
