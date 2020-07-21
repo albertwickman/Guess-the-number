@@ -6,6 +6,7 @@ def tryNumber(user):
         try:
             n = int(input(user + " bet: "))
         except ValueError:
+            print("fel")
             pass
         else:
             if n in range(0, 101):
